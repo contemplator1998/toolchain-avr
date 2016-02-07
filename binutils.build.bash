@@ -5,12 +5,12 @@
 # modify it under the terms of the GNU General Public License
 # as published by the Free Software Foundation; either version 2
 # of the License, or (at your option) any later version.
-# 
+#
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 # GNU General Public License for more details.
-# 
+#
 # You should have received a copy of the GNU General Public License
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
@@ -32,7 +32,7 @@ then
 	wget http://mirror.switch.ch/ftp/mirror/gnu/binutils/binutils-2.24.tar.bz2
 fi
 
-tar xfv binutils-2.24.tar.bz2
+tar xjfv binutils-2.24.tar.bz2
 
 cd binutils-2.24
 for p in ../binutils-patches/*.patch; do echo Applying $p; patch -p1 < $p; done
@@ -69,4 +69,3 @@ nice -n 10 make -j $MAKE_JOBS configure-host
 nice -n 10 make -j $MAKE_JOBS all
 
 make install
-

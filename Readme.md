@@ -17,6 +17,12 @@ Latest toolchain available is based on Atmel 3.4.5 version. It contains:
 ### Building
 Setup has been done on partially set up development machines. If, trying to compile on your machine, you find any package missing from the following list, please open an issue at once! We all can't afford wasting time on setup :)
 
+#### Alpine requirements
+
+```bash
+apk add autoconf automake bash binutils bison file flex g++ gcc git libc-dev libgcc libstdc++ linux-headers make ncurses-dev patch texinfo libusb-dev libusb-compat-dev tar
+```
+
 #### Debian requirements
 
 ```bash
@@ -78,4 +84,3 @@ Consult the [list of contributors](https://github.com/arduino/toolchain-avr/grap
 ### License
 
 The bash scripts are GPLv2 licensed. Every other software used by these bash scripts has its own license. Consult them to know the terms.
-

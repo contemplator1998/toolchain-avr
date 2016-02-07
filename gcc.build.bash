@@ -5,12 +5,12 @@
 # modify it under the terms of the GNU General Public License
 # as published by the Free Software Foundation; either version 2
 # of the License, or (at your option) any later version.
-# 
+#
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 # GNU General Public License for more details.
-# 
+#
 # You should have received a copy of the GNU General Public License
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
@@ -32,34 +32,34 @@ then
 	wget http://mirror.switch.ch/ftp/mirror/gnu/gmp/gmp-5.0.2.tar.bz2
 fi
 
-tar xfv gmp-5.0.2.tar.bz2
+tar xjfv gmp-5.0.2.tar.bz2
 
 if [[ ! -f mpfr-3.0.0.tar.bz2  ]] ;
 then
 	wget http://mirror.switch.ch/ftp/mirror/gnu/mpfr/mpfr-3.0.0.tar.bz2
 fi
 
-tar xfv mpfr-3.0.0.tar.bz2
+tar xjfv mpfr-3.0.0.tar.bz2
 
 if [[ ! -f mpc-0.9.tar.gz  ]] ;
 then
 	wget http://www.multiprecision.org/mpc/download/mpc-0.9.tar.gz
 fi
 
-tar xfv mpc-0.9.tar.gz
+tar xzfv mpc-0.9.tar.gz
 
 if [[ ! -f gcc-4.8.1.tar.bz2 ]] ;
 then
 	wget http://mirror.switch.ch/ftp/mirror/gnu/gcc/gcc-4.8.1/gcc-4.8.1.tar.bz2
 fi
 
-tar xfv gcc-4.8.1.tar.bz2
+tar xjfv gcc-4.8.1.tar.bz2
 
 pushd gcc-4.8.1
 for p in ../gcc-patches/*.patch; do echo Applying $p; patch -p1 < $p; done
 pushd gcc/config/avr/
 sh genopt.sh avr-mcus.def > avr-tables.opt
-cat avr-mcus.def | awk -f genmultilib.awk FORMAT="Makefile" > t-multilib 
+cat avr-mcus.def | awk -f genmultilib.awk FORMAT="Makefile" > t-multilib
 popd
 pushd gcc
 autoconf
@@ -109,4 +109,3 @@ fi
 nice -n 10 make -j $MAKE_JOBS
 
 make install
-
