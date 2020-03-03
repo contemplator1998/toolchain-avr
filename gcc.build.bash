@@ -36,7 +36,7 @@ tar xjfv gmp-5.0.2.tar.bz2
 
 if [[ ! -f mpfr-3.0.0.tar.bz2  ]] ;
 then
-	wget https://mirror.tochlab.net/pub/gnu/mpfr-3.0.0.tar.bz2
+	wget https://mirror.tochlab.net/pub/gnu/mpfr/mpfr-3.0.0.tar.bz2
 fi
 
 tar xjfv mpfr-3.0.0.tar.bz2
