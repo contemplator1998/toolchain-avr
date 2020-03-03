@@ -30,7 +30,7 @@ fi
 
 if [[ ! -f autoconf-2.64.tar.bz2  ]] ;
 then
-	wget http://mirror.switch.ch/ftp/mirror/gnu/autoconf/autoconf-2.64.tar.bz2
+	wget https://mirror.tochlab.net/pub/gnu/autoconf/autoconf-2.64.tar.bz2
 fi
 
 tar xfjv autoconf-2.64.tar.bz2
@@ -49,7 +49,7 @@ cd -
 
 if [[ ! -f automake-1.11.1.tar.bz2  ]] ;
 then
-	wget http://mirror.switch.ch/ftp/mirror/gnu/automake/automake-1.11.1.tar.bz2
+	wget https://mirror.tochlab.net/pub/gnu/automake/automake-1.11.1.tar.bz2
 fi
 
 tar xfjv automake-1.11.1.tar.bz2
