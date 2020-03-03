@@ -29,14 +29,14 @@ export PATH="$TOOLS_BIN_PATH:$PATH"
 
 if [[ ! -f gmp-5.0.2.tar.bz2  ]] ;
 then
-	wget http://mirror.switch.ch/ftp/mirror/gnu/gmp/gmp-5.0.2.tar.bz2
+	wget https://mirror.tochlab.net/pub/gnu/gmp/gmp-5.0.2.tar.bz2
 fi
 
 tar xjfv gmp-5.0.2.tar.bz2
 
 if [[ ! -f mpfr-3.0.0.tar.bz2  ]] ;
 then
-	wget http://mirror.switch.ch/ftp/mirror/gnu/mpfr/mpfr-3.0.0.tar.bz2
+	wget https://mirror.tochlab.net/pub/gnu/mpfr/mpfr-3.0.0.tar.bz2
 fi
 
 tar xjfv mpfr-3.0.0.tar.bz2
@@ -50,7 +50,7 @@ tar xzfv mpc-0.9.tar.gz
 
 if [[ ! -f gcc-4.8.1.tar.bz2 ]] ;
 then
-	wget http://mirror.switch.ch/ftp/mirror/gnu/gcc/gcc-4.8.1/gcc-4.8.1.tar.bz2
+	wget https://mirror.tochlab.net/pub/gnu/gcc/gcc-4.8.1/gcc-4.8.1.tar.bz2
 fi
 
 tar xjfv gcc-4.8.1.tar.bz2
