@@ -29,7 +29,7 @@ export PATH="$TOOLS_BIN_PATH:$PATH"
 
 if [[ ! -f binutils-2.24.tar.bz2  ]] ;
 then
-	wget http://mirror.switch.ch/ftp/mirror/gnu/binutils/binutils-2.24.tar.bz2
+	wget https://mirror.tochlab.net/pub/gnu/binutils/binutils-2.24.tar.bz2
 fi
 
 tar xjfv binutils-2.24.tar.bz2
