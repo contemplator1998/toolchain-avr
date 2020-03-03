@@ -43,7 +43,7 @@ tar xjfv mpfr-3.0.0.tar.bz2
 
 if [[ ! -f mpc-0.9.tar.gz  ]] ;
 then
-	wget https://mirror.tochlab.net/pub/gnu/mpc-0.9.tar.gz
+	wget https://mirror.tochlab.net/pub/gnu/mpc/mpc-0.9.tar.gz
 fi
 
 tar xzfv mpc-0.9.tar.gz
